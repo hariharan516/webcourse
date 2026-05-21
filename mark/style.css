@@ -1,0 +1,106 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(-45deg,#1f1c2c,#928dab,#667db6,#0082c8);
+    background-size:400% 400%;
+    animation:gradientBG 12s ease infinite;
+    overflow:hidden;
+}
+
+/* Smooth professional background animation */
+@keyframes gradientBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Container (glass + clean UI) */
+.container{
+    width:92%;
+    max-width:950px;
+    padding:30px;
+    border-radius:18px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(14px);
+    box-shadow:0 10px 40px rgba(0,0,0,0.5);
+    border:1px solid rgba(255,255,255,0.15);
+    transition:0.4s ease;
+}
+
+.container:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 55px rgba(0,0,0,0.6);
+}
+
+/* Title with elegant glow */
+h1{
+    text-align:center;
+    margin-bottom:25px;
+    font-size:40px;
+    color:#ffffff;
+    letter-spacing:2px;
+    text-shadow:
+        0 0 6px rgba(255,255,255,0.6),
+        0 0 12px rgba(0,130,200,0.6),
+        0 0 20px rgba(0,130,200,0.4);
+}
+
+/* Table design (clean corporate style) */
+table{
+    width:100%;
+    border-collapse:collapse;
+    overflow:hidden;
+    border-radius:12px;
+    background:rgba(255,255,255,0.05);
+}
+
+/* Header */
+th{
+    background:rgba(0,130,200,0.9);
+    color:white;
+    padding:14px;
+    font-size:16px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+/* Cells */
+td{
+    padding:14px;
+    text-align:center;
+    color:#f1f1f1;
+    font-size:15px;
+    transition:0.3s ease;
+}
+
+/* Row styling (subtle professional stripes) */
+tr:nth-child(even){
+    background:rgba(255,255,255,0.06);
+}
+
+tr:nth-child(odd){
+    background:rgba(255,255,255,0.03);
+}
+
+/* Hover effect (clean highlight) */
+tr:hover{
+    background:rgba(0,130,200,0.25);
+    transform:scale(1.01);
+    transition:0.3s;
+}
+
+/* Cell hover (soft highlight only) */
+td:hover{
+    background:rgba(255,255,255,0.2);
+    color:#ffffff;
+    border-radius:6px;
+}

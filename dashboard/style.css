@@ -1,0 +1,153 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* 🌈 Animated Neon Background */
+body{
+    display:flex;
+    height:100vh;
+    overflow:hidden;
+    background:linear-gradient(-45deg,#ff0099,#493240,#00dbde,#e180e2,#f9d423);
+    background-size:400% 400%;
+    animation:gradientBG 12s ease infinite;
+}
+
+/* Background animation */
+@keyframes gradientBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* ✨ Sidebar Glass Effect */
+.sidebar{
+    width:250px;
+    padding:30px;
+    color:white;
+    background:rgba(0,0,0,0.25);
+    backdrop-filter:blur(18px);
+    box-shadow:0 0 25px rgba(0,0,0,0.4);
+}
+
+/* 🔥 Glowing Title */
+.sidebar h2{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:26px;
+    color:#fff;
+    text-shadow:
+        0 0 5px #fff,
+        0 0 10px #ff00ff,
+        0 0 20px #00ffff,
+        0 0 30px #f165f1;
+}
+
+/* Menu Items */
+.sidebar ul li{
+    padding:15px;
+    margin:15px 0;
+    border-radius:12px;
+    cursor:pointer;
+    transition:0.4s;
+    color:white;
+    position:relative;
+}
+
+/* 🌟 Hover Glow */
+.sidebar ul li:hover{
+    background:rgba(255,255,255,0.95);
+    color:#ff0080;
+    transform:translateX(10px);
+    box-shadow:
+        0 0 10px #ff0080,
+        0 0 20px #00ffff,
+        0 0 30px #da70da;
+}
+
+/* Main */
+.main{
+    flex:1;
+    padding:30px;
+}
+
+/* Topbar */
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:white;
+}
+
+/* 🔥 Big Glow Heading */
+.topbar h1{
+    font-size:28px;
+    text-shadow:
+        0 0 5px #fff,
+        0 0 10px #00ffff,
+        0 0 20px #ff00ff,
+        0 0 30px #00ffff;
+}
+
+/* Button */
+.topbar button{
+    padding:10px 22px;
+    border:none;
+    border-radius:25px;
+    font-weight:bold;
+    cursor:pointer;
+    background:white;
+    color:#f157a4;
+    transition:0.4s;
+    box-shadow:0 0 10px #fff;
+}
+
+.topbar button:hover{
+    transform:scale(1.1);
+    background:#f161a9;
+    color:white;
+    box-shadow:0 0 15px #753354, 0 0 30px #00ffff;
+}
+
+/* Cards Grid */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin-top:50px;
+}
+
+/* Glass Card */
+.card{
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(18px);
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    color:white;
+    transition:0.5s;
+    box-shadow:0 0 20px rgba(0,0,0,0.3);
+}
+
+/* ✨ Card Hover Glow */
+.card:hover{
+    transform:translateY(-10px) scale(1.08);
+    background:rgba(255,255,255,0.95);
+    color:#6a11cb;
+    box-shadow:
+        0 0 15px #e9aee9,
+        0 0 30px #00ffff,
+        0 0 40px #ff0080;
+}
+
+/* 🔥 Glowing Numbers/Text */
+.card h2{
+    font-size:42px;
+    margin-bottom:10px;
+    text-shadow:
+        0 0 5px #fff,
+        0 0 10px hsl(300, 81%, 71%),
+        0 0 20px #00ffff;
+}
